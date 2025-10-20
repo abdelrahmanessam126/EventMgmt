@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Event Details</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-guest">
+      <a class="brand" href="index.html">EventMgmt</a>
+      <a href="events.html">View Events</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign up</a>
+    </nav>
+    <nav class="navbar navbar-user">
+      <a class="brand" href="index.html">EventMgmt (User)</a>
+      <a href="events.html">Events</a>
+      <a href="registered.html">My Registrations</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+    <nav class="navbar navbar-admin">
+      <a class="brand" href="index.html">EventMgmt (Admin)</a>
+      <a href="admin.html">Dashboard</a>
+      <a href="events.html">Events</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="events.html" class="back">&larr; Back to events</a>
+    <div id="event-detail" class="event-detail"></div>
+
+    <section class="register-panel">
+      <h3>Register for this event</h3>
+      <form id="register-form" onsubmit="return false;">
+        <label>Full name: <input type="text" name="fullname" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Number of seats: <input type="number" name="seats" min="1" value="1" required></label>
+        <button id="registerBtn">Register</button>
+      </form>
+      <div id="register-message" class="info"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventMgmt — Phase 1 deliverable</p>
+  </footer>
+</body>
+</html>

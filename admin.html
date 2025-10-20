@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-admin">
+      <a class="brand" href="index.html">EventMgmt (Admin)</a>
+      <a href="admin.html">Dashboard</a>
+      <a href="events.html">Events</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Admin Dashboard</h1>
+
+    <section class="admin-forms">
+      <h2>Add / Edit Event</h2>
+      <form id="event-form" class="card" onsubmit="return false;">
+        <label>Title: <input type="text" id="title" name="title" required></label>
+        <label>Date: <input type="date" id="dateInput" name="date" required></label>
+        <label>Location: <input type="text" id="locationInput" name="location" required></label>
+        <label>Category:
+          <select id="categoryInput" name="category" required>
+            <option value="">Select category</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="meetup">Meetup</option>
+          </select>
+        </label>
+        <label>Description: <textarea id="description" name="description" rows="4"></textarea></label>
+        <label>Number of Seats: <input type="number" id="seatsInput" name="numberOfSeats" min="0" value="50"></label>
+        <button id="addEventBtn">Add Event</button>
+      </form>
+      <div id="admin-message" class="info"></div>
+    </section>
+
+    <section>
+      <h2>Manage existing events</h2>
+      <div id="admin-events" class="events-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventMgmt — Phase 1 deliverable</p>
+  </footer>
+</body>
+</html>

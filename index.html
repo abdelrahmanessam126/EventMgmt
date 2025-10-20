@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Event Management - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+
+<!-- === HAMBURGER MENU START === -->
+<header class="navbar">
+  <div class="logo">EventMgmt</div>
+  
+  <!-- Menu Toggle Checkbox -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  
+  <!-- Menu Links -->
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">View Events</a></li>
+    <li><a href="signup-user.html">User Sign Up</a></li>
+    <li><a href="signup-admin.html">Admin Sign Up</a></li>
+    <li><a href="login-user.html">User Login</a></li>
+    <li><a href="login-admin.html">Admin Login</a></li>
+  </ul>
+</header>
+<!-- === HAMBURGER MENU END === -->
+
+
+  <main class="container">
+    <h1>Event Management Website</h1>
+    <section class="quick-links">
+      <a class="card" href="events.html">Browse Events</a>
+      <a class="card" href="signup.html">Create Account</a>
+      <a class="card" href="login.html">Login</a>
+    </section>
+
+    <section>
+      <h2>Sample upcoming events</h2>
+      <div id="sample-events" class="events-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventMgmt Website deliverable</p>
+  </footer>
+</body>
+</html>

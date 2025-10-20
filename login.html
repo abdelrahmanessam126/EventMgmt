@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - EventMgmt</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-guest">
+      <a class="brand" href="index.html">EventMgmt</a>
+      <a href="events.html">View Events</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign up</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Login</h1>
+    <form id="login-form" class="card" onsubmit="return false;">
+      <label>Username: <input type="text" name="username" required></label>
+      <label>Password: <input type="password" name="password" required></label>
+      <button id="loginBtn">Login</button>
+    </form>
+    <p class="note">Phase 1: form submits are not connected to a server. Use the Signup page to simulate accounts.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventMgmt — Phase 1 deliverable</p>
+  </footer>
+</body>
+</html>
