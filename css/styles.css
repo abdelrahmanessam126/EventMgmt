@@ -1,3 +1,25 @@
+
+.header {
+  text-align: center;
+  padding: 20px; /* spacing inside header */
+  background-color: rgba(255, 255, 255, 0.8); /* soft white overlay */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 200px; /* adjust as needed */
+  height: auto;
+}
+
+body {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* External CSS for Event Management Phase 1 */
 :root{
   --maxw:1100px;
@@ -5,12 +27,28 @@
   --muted:#666;
 }
 *{box-sizing:border-box}
-body{font-family:Inter, Roboto, Arial, sans-serif;line-height:1.4;margin:0;color:#111;background:#f7f9fc}
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  color: #111;
+
+  /* 🌄 Background image styling */
+  background-image: url("../background.png");
+  background-size: cover;         /* makes it cover the entire screen */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;   /* prevents it from repeating */
+  background-attachment: fixed;   /* gives a nice “parallax” effect when scrolling */
+}
 .container{max-width:var(--maxw);margin:1.2rem auto;padding:1rem}
-header .navbar{display:flex;gap:1rem;align-items:center;padding:0.6rem 1rem;background:#fff;border-bottom:1px solid #e6e9ef}
 .navbar .brand{font-weight:700;color:var(--accent);text-decoration:none;margin-right:auto}
 .navbar a{color:#333;text-decoration:none;padding:0.4rem 0.6rem;border-radius:6px}
 .navbar a:hover{background:#eef4ff}
+nav {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #000;
+}
+
 .navbar-guest{border-left:6px solid #9aa7ff}
 .navbar-user{border-left:6px solid #7ad19a}
 .navbar-admin{border-left:6px solid #f59b42}
@@ -37,15 +75,6 @@ footer{padding:1rem;text-align:center;color:var(--muted);font-size:0.95rem;margi
 
 
 /* ===== Hamburger Menu Styling ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-}
 
 .logo {
   font-weight: bold;
@@ -109,4 +138,65 @@ footer{padding:1rem;text-align:center;color:var(--muted);font-size:0.95rem;margi
   .menu li {
     padding: 8px 0;
   }
+}
+
+
+/* 🌈 Polished Gradient Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(189, 232, 251, 0.9));
+  color: #081029;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(12,20,40,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #081029;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.15);
+  color: #003366;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #081029;
+}
+
+.tab-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* allows them to stack on small screens */
+}
+
+.tab-panel {
+  flex: 1;
+  min-width: 300px; /* ensures they don’t shrink too much */
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tab-panel h2 {
+  text-align: center;
+  color: var(--accent);
+}
+
+.card {
+  background: #fff;
 }
